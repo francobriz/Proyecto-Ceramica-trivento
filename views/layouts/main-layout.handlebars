@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{titulo}}</title>
+    <link rel="stylesheet" href="style2.css" />
+    <script
+      src="https://kit.fontawesome.com/84ba90466b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="encabezado">
+      <nav>
+        <div class="logotipo">
+          <a href="/"><img src="imgs/logo7.png" class="logo"/></a> 
+        </div>
+        <input type="checkbox" id="check" />
+        <label for="check" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul class="nav-menu">
+          <li><a class="active" href="/home">Home</a></li>
+          <li><a href="/productos">Nuestros Productos</a></li>
+          <li><a href="/presupuestos">Presupuestos</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          {{#if session.username}}
+          <li><a href="/logout">Cerrar sesión</a></li>
+          {{else}}
+          <li><a href="/login">Ingresar</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="contenedor">
+      {{{body}}}
+    </div>
+
+    <footer class="footer">
+      <div class="caja-datos">
+        <a href="https://www.google.com.ar/maps/place/Fabrica+Ceramica/@-26.9584452,-65.0463836,16z/data=!4m5!3m4!1s0x9422f9bb959e03c1:0xde790713cfcfb4b7!8m2!3d-26.9582974!4d-65.0453432">
+                  <div class="items">
+          <div class="iconos">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="texto">
+            <p>Ruta 302 Ranchillos, Tucumán</p>
+          </div>
+        </a>
+        <div class="clear"></div>
+        </div>
+        <div class="items">
+          <div class="iconos">
+            <i class="fas fa-phone-square-alt"></i>
+          </div>
+          <div class="texto">
+            <p>1135933358</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="redes-sociales">
+        <a href="https://es-la.facebook.com/">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+       <div class="redes-sociales">
+        <a href="/trabaja-con-nosotros">
+        <span class="cargarCvs">Cargar Curriculum</span>
+        
+        </a>
+      </div>
+      <div class="clear"></div>
+    </footer>
+  </body>
+</html>

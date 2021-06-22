@@ -1,0 +1,381 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+ /* encabezado */
+header{
+    width: 100%;
+    height: 25vh;
+    background-color: rgba(0, 0, 0,.55);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo{
+    width: 166px;
+}
+
+.logo{
+    width: 200px;
+    margin-left: 0px;
+    margin-top: 83px;
+}
+.menu-btn{
+    font-size: 25px;
+    color:orange;
+    margin-right: 16px;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 30px;
+    background: rgba(0, 0, 0,.95);
+    text-align: center;
+    transition: all.5s;
+}
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+ .nav-menu li a {
+    color: floralwhite;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: orange;
+    transition: .3s;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+
+/* encabezado responsivo */
+@media screen and (min-width: 768px) {
+    .logo{
+        margin-left: 16px;
+        display: flex;
+    }
+    nav{
+        height: 100px;
+    }
+    .menu-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        width: 600px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: -7px;
+    }
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 13px;
+        transition: none;
+    }
+    .nav-menu li a{
+        font-size: 12px;
+
+    }
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    padding: 20px 30px;
+    background-color:rgba(0, 0, 0,.76);
+}
+.footer .caja-datos{
+    border-left: 1px solid #999;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    margin-left: 20px;
+    float: left;
+}
+.footer .caja-datos .items{
+    margin-top: 5px;
+}
+.footer .caja-datos .items .iconos{
+    width: 25px;
+    float:left;
+    color:orange;
+    text-align: center;
+    margin-left: 10px;
+}
+.footer .caja-datos .items .iconos i{
+    font-size: 18px;
+}
+.footer .caja-datos .items .texto{
+    float: left;
+}
+.footer .caja-datos .items .texto p{
+    color: #fff;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0;
+}
+.clear{
+    clear: both;
+}
+.footer .redes-sociales{
+    margin-top: 15px;
+    float: right;
+}
+.footer .redes-sociales a{
+    font-size: 24px;
+    color:orange;
+    margin-left: 30px;
+}
+
+/* footer responsivo */
+
+@media screen and(min-width:768){
+    .footer{
+        padding: 40px 0px;
+    }
+    .footer .caja-datos{
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .footer .caja-datos .items{
+        width: 100%;
+        text-align: center;
+    }
+    .footer .caja-datos .items .iconos{
+        display:inline-block;
+        float: none;
+    }
+    .footer .caja-datos .items .texto{
+        display: inline-block;
+        float: none;
+    }
+    .footer .redes-sociales{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* contenedor render de las paginas */
+.contenedor{
+    box-sizing: border-box;
+    width:auto;
+    display: block;
+    text-align: center;
+}
+
+/* productos */
+
+.productos{
+    background-color: whitesmoke;
+}
+
+.tarjetas{
+    display: inline-block;
+    padding: 10px;
+    border: solid black 1px;
+    margin: 10px 50px;
+}
+
+.detalle-prod{
+    min-height: 400px;
+}
+
+/* presupuestos */
+.presupuestos{
+    height: 600px;
+    background-image: url(imgs/presupuestos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.calculadora{
+        text-align: center;
+        width:260px;
+        height: 450px;
+        border-radius: 3px;
+        margin: auto;
+        background-color: rgba(255,255,255,0.4);
+        padding: 20px;
+        border:0;
+        box-shadow: -3px -3px 10px 0 black;
+        margin-top: 0px;
+        margin-bottom: 10px;
+}
+
+.calculadora select{
+    width: 156px;
+}
+
+/* registro */
+.login{
+    height: 500px;
+    background-image: url(imgs/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login form{
+    text-align: center;
+    width:230px;
+    height: 250px;
+    border-radius: 2px;
+    margin: auto;
+    background-color: rgba(255,255,255,0.4);
+    padding: 20px;
+    border:0;
+    box-shadow: -2px -1px 10px 0 black;
+    margin-top: 0px;
+    margin-bottom: 10px; 
+}
+
+.login form input{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 0px;
+    font-family:-webkit-pictograph;
+    font-size: small;
+    border-radius: 2px;
+    background-color: white;
+}
+.login #boton {
+    background-color: #999;
+    width: 100px;
+}
+
+
+/* vista de administrador */
+.admin{
+    height: 500px;
+    background-image: url(imgs/admin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* HOME */
+.home{
+    background-color: whitesmoke;
+    padding: 50px 50px;
+}
+
+.home p{
+    display: inline-block;
+}
+
+.imgFrase{
+    display: inline-block;
+    width: 50%;
+}
+
+.frase p{
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+
+.imgFrase img{
+    width: 50%;
+}
+
+
+/* contacto */
+.contacto{
+    height: 500px;
+    background-image: url(imgs/contacto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contacto form{
+        text-align: center;
+        width:300px;
+        height: 350px;
+        border-radius: 3px;
+        margin: auto;
+        background-color: rgba(255,255,255,0.4);
+        padding: 20px;
+        border:0;
+        box-shadow: -3px -3px 10px 0 black;
+        margin-top: 0px;
+        margin-bottom: 10px; 
+}
+
+/* trabaja con nosotros */
+.cargarCv{
+    height: 500px;
+    background-image: url(imgs/trabConNos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cargarCv form{
+        text-align: center;
+        width:197px;
+        height: 250px;
+        border-radius: 3px;
+        margin: auto;
+        background-color:rgba(255,255,255,0.4);
+        padding: 20px;
+        border:0;
+        box-shadow: -3px -3px 10px 0 black;
+        margin-top: 0px;
+        margin-bottom: 10px; 
+}
+
+#archivo{
+    color: transparent;
+}
+
+
+form ::placeholder{
+    color: black;
+}
+
+.espacio{
+    height: 100px;
+    font-size:35px;
+    color:#00008B;
+    font-family: -webkit-pictograph;
+}
+
+.cargarCvs{
+font-size: 13px;
+font-family: -webkit-pictograph;
+}

@@ -1,0 +1,70 @@
+<div class="presupuestos">
+<div class="espacio">{{leyenda}}</div>
+  <div class="calculadora">
+    <h3>Cuántos m² deseas construir?</h3><br />
+
+    <label for="m2">M²</label><br />
+    <input type="number" name="m2" id="m2" placeholder="M²" min="1" required/><br /><br/>
+
+    <label for="ladrilloHueco">Tipo de ladrillo</label><br />
+    <select name="ladrillo" id="tipoLadrillo" required>
+      <option value="0" selected="selected"> </option>
+      {{#each productos}}
+      <option   value="{{this.cantxMts}},{{this.precio}}">{{this.producto}} {{this.medidas.ancho}}x{{this.medidas.alto}}x{{this.medidas.largo}} </option>
+      {{/each}}
+
+    </select><br /><br />
+
+    <label for="flete">Necesitas flete?</label>
+    <select name="flete" id="flete" required onchange="eleccion()">
+      <option value="si">Si</option>
+      <option value="no" selected>No</option>
+
+    </select><br /><br />
+    <select name="localidad" required id="localidad" disabled>
+      <option value="0" selected="selected">Localidad</option>
+      {{#each localidades}}
+        <option value={{this.precio}}>{{this.localidad}}</option>
+      {{/each}}
+    </select><br /><br />
+
+    <button onclick="multiplicar()">Presupuesto</button>
+     <p id="resultado"></p>
+     <p id="precio"></p>
+  </div>
+
+</div>
+
+<script>
+  
+  function multiplicar(){ 
+    let m2 = parseInt(document.getElementById("m2").value);
+//10,2 = 10: ladxmts-  2: precLadXmts
+    let ladxMts = parseInt(document.getElementById("tipoLadrillo").value.split(",")[0]);
+    let ladxPrec = parseInt(document.getElementById("tipoLadrillo").value.split(",")[1]);
+    let precioFlete = parseInt(document.getElementById("localidad").value);
+    
+
+  document.getElementById("resultado").innerHTML = m2 * ladxMts +" Ladrillos";
+
+  let cantidadLadrillos = m2 * ladxMts;
+  let precioFinal = cantidadLadrillos * ladxPrec;
+  console.log(ladxPrec);
+  console.log(ladxMts);
+
+  document.getElementById("precio").innerHTML =`Precio:$ ${precioFinal + precioFlete}`;
+ }
+
+
+
+function eleccion(){
+  let flete = document.getElementById("flete").value;
+  let localidad = document.getElementById("localidad");
+  if (flete === "si"){
+    localidad.removeAttribute("disabled")
+  }else{
+    localidad.setAttribute("disabled","true") 
+  }
+}
+
+</script>

@@ -1,0 +1,14 @@
+<div class="productos">
+  <div class="espacio">{{leyenda}}</div>
+  <h4>Fabricamos cerámica de calidad para que construyas un futuro formidable</h4>
+</div>
+{{#each lista}}
+<a href="/detalle-producto?id={{this.id}}">
+  <div class="tarjetas">
+    <img src="{{this.img}}" class="tarjetaImg" />
+    <div class="tarjetaDatos">
+      <h5 class="tarjetaTitulo">{{this.producto}}</h5>
+    </div>
+  </div>
+</a>
+{{/each}}

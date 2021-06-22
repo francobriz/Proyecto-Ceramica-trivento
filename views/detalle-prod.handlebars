@@ -1,0 +1,12 @@
+{{#if lista}}
+<div class="detalle-prod">
+  <img class="imgProd" src="{{lista.img}}" />
+  <h1> {{lista.producto}}</h1>
+  <p class="medidas">Medidas: {{lista.medidas.ancho}}x{{lista.medidas.alto}}x{{lista.medidas.largo}}</p>
+  <p class="precio">Precio: $ {{lista.precio}}</p>
+  <p class="cant">Cant x mts: {{lista.cantxMts}}</p>
+  
+</div>
+{{else}}
+<h4>asd</h4>
+{{/if}}
