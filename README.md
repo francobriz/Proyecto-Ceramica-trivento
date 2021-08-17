@@ -13,6 +13,6 @@ El proyecto se basa en una página web de una fábrica dedicada a la construcci�
     * **MongoDB**
     * **Media queries**
 - Descarga el proyecto y utliza los siguientes comandos:
-    *para instalar dependencias usadas*
+    * para instalar dependencias usadas*
     * npm install
 *para iniciar | npm start*
