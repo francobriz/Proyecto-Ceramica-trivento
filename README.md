@@ -10,7 +10,7 @@
     * **Multer**
     * **fs**
     * **Express-Session**
-    * **MongoDB**
+    * **MongoDB Atlas**
     * **Media queries**
 - Para ver el proyecto descárgalo y utIliza los siguientes comandos:
     * *para instalar dependencias usadas* `npm install`
