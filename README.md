@@ -1,5 +1,5 @@
 # Proyecto final Cerámica trivento
-El proyecto se basa en una página web de una fábrica dedicada a la construcción de ládrillos cerámicos, su historia y la visualización de sus productos.
+## El proyecto se basa en una página web de una fábrica dedicada a la construcción de ládrillos cerámicos, su historia y la visualización de sus productos.
 - Tecnologias utilizadas:
     * **HTML5**
     * **CSS3**
