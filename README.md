@@ -17,4 +17,4 @@
 - Para ver el proyecto descárgalo y utIliza los siguientes comandos:
   - _para instalar dependencias usadas_ `npm install`
   - _para iniciar_ `npm start`
-  - _Servidor alojado en_ `localhost:3003`
+  - _Podés probar la app alojada en heroku_ `https://ceramica-trivento.herokuapp.com/`
