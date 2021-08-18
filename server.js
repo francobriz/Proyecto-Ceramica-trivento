@@ -2,7 +2,7 @@ const server = require("express");
 const path = require("path");
 const app = server();
 const hbs = require("express-handlebars");
-const puerto = 3003;
+const PORT = process.env.PORT || 3003;
 const datosCeramica = require("./dbCeramica");
 const expSession = require("express-session");
 const multer = require("multer");
@@ -231,6 +231,6 @@ app.post("/cargarCv", upload.single("archivo"), (req, res) => {
   );
 });
 
-app.listen(puerto, () => {
-  console.log("servidor corriendo en puerto", puerto);
+app.listen(PORT, () => {
+  console.log("servidor corriendo en puerto", PORT);
 });
